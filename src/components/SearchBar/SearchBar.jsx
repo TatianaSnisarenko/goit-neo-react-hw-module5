@@ -1,4 +1,4 @@
-import { FaSearch, FaExclamationTriangle } from "react-icons/fa";
+import { FaExclamationTriangle } from "react-icons/fa";
 import toast from "react-hot-toast";
 import css from "./SearchBar.module.css";
 
@@ -27,7 +27,7 @@ export default function SearchBar({ onSubmit }) {
   };
 
   return (
-    <header className={css.header}>
+    <div className={css.container}>
       <form className={css.form} onSubmit={handleSubmit}>
         <input
           className={css.input}
@@ -35,12 +35,12 @@ export default function SearchBar({ onSubmit }) {
           name="input"
           autoComplete="off"
           autoFocus
-          placeholder="Search images and photos"
+          placeholder="Search movies by name"
         />
         <button className={css.button} type="submit">
-          <FaSearch className={css.search} />
+          Search
         </button>
       </form>
-    </header>
+    </div>
   );
 }

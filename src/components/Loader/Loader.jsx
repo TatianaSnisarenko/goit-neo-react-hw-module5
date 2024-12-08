@@ -6,8 +6,8 @@ export default function Loader() {
       visible={true}
       height="100"
       width="100"
-      color="#0000FF"
-      secondaryColor="#0000FF"
+      color="#007bff"
+      secondaryColor="#007bff"
       radius="12.5"
       ariaLabel="mutating-dots-loading"
       wrapperStyle={{

@@ -3,13 +3,6 @@
   --desktop-el-width: calc((100% - 30px) / 4);
 }
 
-ul,
-ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
 img {
   display: block;
   object-fit: cover;
@@ -25,4 +18,20 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+a {
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-size: 18px;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
 }

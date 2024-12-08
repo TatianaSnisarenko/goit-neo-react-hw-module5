@@ -6,7 +6,7 @@ export default function NotFoundMessage({ query }) {
       <h2>
         {
           <span>
-            No images found for the query:{" "}
+            No movies found for the query:{" "}
             <span className={css.italic}>{query}</span>
           </span>
         }
