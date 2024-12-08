@@ -1,16 +1,21 @@
+import { useMemo } from "react";
 import css from "./MovieCastList.module.css";
 import MovieCastMember from "../MovieCastMember/MovieCastMember";
 
+const sortCastByProfilePath = (a, b) => {
+  if (a.profile_path && !b.profile_path) {
+    return -1;
+  }
+  if (!a.profile_path && b.profile_path) {
+    return 1;
+  }
+  return 0;
+};
+
 export default function MovieCastList({ cast }) {
-  const sortedCast = [...cast].sort((a, b) => {
-    if (a.profile_path && !b.profile_path) {
-      return -1;
-    }
-    if (!a.profile_path && b.profile_path) {
-      return 1;
-    }
-    return 0;
-  });
+  const sortedCast = useMemo(() => {
+    return [...cast].sort(sortCastByProfilePath);
+  }, [cast]);
 
   return (
     <ul className={css.list}>
