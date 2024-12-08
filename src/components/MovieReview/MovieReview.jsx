@@ -1,34 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import css from "./MovieReview.module.css";
 
-// export default function MovieReview({ review }) {
-//   const [isExpanded, setIsExpanded] = useState(false);
-
-//   const toggleExpand = () => {
-//     setIsExpanded(!isExpanded);
-//   };
-//   return (
-//     <div className={css.card}>
-//       <h3 className={css.author}>Author: {review.author}</h3>
-//       <div className={css.review}>
-//         <p className={isExpanded ? css.contentExpanded : css.content}>
-//           {review.content}
-//         </p>
-//         {!isExpanded && (
-//           <button className={css.moreButton} onClick={toggleExpand}>
-//             more
-//           </button>
-//         )}
-//         {isExpanded && (
-//           <button className={css.moreButton} onClick={toggleExpand}>
-//             less
-//           </button>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
 export default function MovieReview({ review }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isOverflowing, setIsOverflowing] = useState(false);
